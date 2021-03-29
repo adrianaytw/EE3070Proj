@@ -7,9 +7,13 @@
 
 import UIKit
 
-class SearchViewController: BaseViewController {
+class SearchViewController: BaseViewController,  UITableViewDataSource, UITableViewDelegate {
 
+    
+
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var testButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     var rootRouter: RootRouter? {
        return router as? RootRouter
@@ -17,7 +21,10 @@ class SearchViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         uiInit()
+        self.tableView.reloadData()
 
         // Do any additional setup after loading the view.
     }
@@ -30,14 +37,18 @@ class SearchViewController: BaseViewController {
     @IBAction func testClicked(_ sender: Any) {
         rootRouter?.showTest2()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "SearchListTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SearchListTableViewCell else {
+          fatalError("The dequeued cell is not an instance of SearchListTableViewCell.")
+        }
+//          cell.uiBind(classes: (viewModel.getTodayClassArray()?[indexPath.row]))
+          return cell
+    }
 
 }
