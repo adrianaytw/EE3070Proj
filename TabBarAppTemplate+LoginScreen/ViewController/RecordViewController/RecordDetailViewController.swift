@@ -1,13 +1,13 @@
 //
-//  RecordViewController.swift
+//  RecordDetailViewController.swift
 //  TabBarAppTemplate+LoginScreen
 //
-//  Created by Au Yeung Tsz Wang on 29/3/2021.
+//  Created by Bowie Tso on 31/3/2021.
 //
 
 import UIKit
 
-class RecordViewController: BaseViewController {
+class RecordDetailViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

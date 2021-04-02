@@ -435,11 +435,11 @@
             </objects>
             <point key="canvasLocation" x="-936" y="-1203"/>
         </scene>
-        <!--Item-->
+        <!--Record-->
         <scene sceneID="gHM-vq-ZvL">
             <objects>
                 <navigationController id="mZt-Nl-6gp" customClass="RootThirdNavigationController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FtK-ty-8o7"/>
+                    <tabBarItem key="tabBarItem" title="Record" id="FtK-ty-8o7"/>
                     <navigationItem key="navigationItem" id="AEr-cr-AIa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pcw-G2-AC5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
