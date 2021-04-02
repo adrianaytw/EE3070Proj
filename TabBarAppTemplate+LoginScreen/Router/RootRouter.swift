@@ -49,6 +49,30 @@ class RootRouter: Router{
         navigationController?.pushViewController(moreViewController, animated: false)
     }
     
+    func showRecord(){
+        guard
+            let recordViewController = UIStoryboard.storyboard(.record).instantiateViewController(RecordViewController.self) else { // UIStoryboard.storyboard(.more) mean using More storyboard
+            return
+        }
+        //        let homeNavigationController = BaseNavigationController.init(rootViewController: homeViewController)
+//        moreViewController.router = MoreRouter(moreNavigationController!)
+        recordViewController.router = self
+        //navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.pushViewController(recordViewController, animated: false)
+    }
+    
+    func showProfile(){
+        guard
+            let profileViewController = UIStoryboard.storyboard(.main).instantiateViewController(ProfileViewController.self) else { // UIStoryboard.storyboard(.more) mean using More storyboard
+            return
+        }
+        //        let homeNavigationController = BaseNavigationController.init(rootViewController: homeViewController)
+//        moreViewController.router = MoreRouter(moreNavigationController!)
+        profileViewController.router = self
+        //navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.pushViewController(profileViewController, animated: false)
+    }
+    
     func showTest2(){
         guard
             let test2ViewController = UIStoryboard.storyboard(.main).instantiateViewController(Test2ViewController.self) else { // UIStoryboard.storyboard(.more) mean using More storyboard

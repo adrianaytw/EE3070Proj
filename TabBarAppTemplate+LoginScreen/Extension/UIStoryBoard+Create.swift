@@ -9,6 +9,7 @@ extension UIStoryboard {
     enum Storyboard: String {
         case main = "Main"
         case more = "More"
+        case record = "Record"
         case login = "Login"
     }
 

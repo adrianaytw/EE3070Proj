@@ -7,11 +7,14 @@
 
 import UIKit
 
-class RootThirdNavigationController: UINavigationController {
+class RootRecordNavigationController: UINavigationController {
 
+    var router: RootRouter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        router = RootRouter(self)
+        router?.showRecord()
         // Do any additional setup after loading the view.
     }
     

@@ -12,7 +12,7 @@
         <!--More View Controller-->
         <scene sceneID="nYS-k8-Ky3">
             <objects>
-                <viewController storyboardIdentifier="MoreViewController" id="oea-sD-PMi" customClass="MoreViewController" customModule="TabBarAppTemplate_LoginScreen" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreViewController" id="oea-sD-PMi" customClass="MoreViewController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Xi-mK-Oo5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

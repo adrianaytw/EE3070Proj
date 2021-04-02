@@ -12,6 +12,11 @@
 		0E3BEB0526126A40006DADAA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3BEB0426126A40006DADAA /* UIViewExtension.swift */; };
 		0E9BC8B026148E76009AA2A7 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9BC8AF26148E76009AA2A7 /* Record.storyboard */; };
 		0E9BC8B32614925C009AA2A7 /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC8B22614925C009AA2A7 /* RecordDetailViewController.swift */; };
+		0E9BC8B626176073009AA2A7 /* RootProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC8B526176073009AA2A7 /* RootProfileNavigationController.swift */; };
+		0E9BC8BB2617645A009AA2A7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC8BA2617645A009AA2A7 /* ProfileViewController.swift */; };
+		0E9BC8BE261765A3009AA2A7 /* ViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC8BD261765A3009AA2A7 /* ViewShadowExtension.swift */; };
+		0E9BC8C1261765CE009AA2A7 /* UIViewRoundCornerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC8C0261765CE009AA2A7 /* UIViewRoundCornerExtension.swift */; };
+		0E9BC8C4261765F6009AA2A7 /* UIColorInitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC8C3261765F6009AA2A7 /* UIColorInitExtension.swift */; };
 		0EA22D6D260264EC00E3E2B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA22D6C260264EC00E3E2B1 /* AppDelegate.swift */; };
 		0EA22D6F260264EC00E3E2B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA22D6E260264EC00E3E2B1 /* SceneDelegate.swift */; };
 		0EA22D71260264EC00E3E2B1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA22D70260264EC00E3E2B1 /* BaseViewController.swift */; };
@@ -30,7 +35,7 @@
 		0EA22DBF26026E7A00E3E2B1 /* UIStoryBoard+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA22DBE26026E7A00E3E2B1 /* UIStoryBoard+Create.swift */; };
 		0EA22DC326026F0800E3E2B1 /* RootMoreNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA22DC226026F0800E3E2B1 /* RootMoreNavigationController.swift */; };
 		0EA22DC726026FF500E3E2B1 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA22DC626026FF500E3E2B1 /* More.storyboard */; };
-		3A3FBD5D26028CC0002A3666 /* RootThirdNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FBD5C26028CC0002A3666 /* RootThirdNavigationController.swift */; };
+		3A3FBD5D26028CC0002A3666 /* RootRecordNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FBD5C26028CC0002A3666 /* RootRecordNavigationController.swift */; };
 		3A3FBD6026028E29002A3666 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FBD5F26028E29002A3666 /* Test2ViewController.swift */; };
 		3A3FBD6326033943002A3666 /* Test3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FBD6226033943002A3666 /* Test3ViewController.swift */; };
 		3A3FBD662611CDBA002A3666 /* ProductSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FBD652611CDB9002A3666 /* ProductSearchViewController.swift */; };
@@ -44,6 +49,11 @@
 		0E3BEB0426126A40006DADAA /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0E9BC8AF26148E76009AA2A7 /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
 		0E9BC8B22614925C009AA2A7 /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
+		0E9BC8B526176073009AA2A7 /* RootProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootProfileNavigationController.swift; sourceTree = "<group>"; };
+		0E9BC8BA2617645A009AA2A7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0E9BC8BD261765A3009AA2A7 /* ViewShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadowExtension.swift; sourceTree = "<group>"; };
+		0E9BC8C0261765CE009AA2A7 /* UIViewRoundCornerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRoundCornerExtension.swift; sourceTree = "<group>"; };
+		0E9BC8C3261765F6009AA2A7 /* UIColorInitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorInitExtension.swift; sourceTree = "<group>"; };
 		0EA22D69260264EC00E3E2B1 /* TabBarAppTemplate+LoginScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TabBarAppTemplate+LoginScreen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA22D6C260264EC00E3E2B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EA22D6E260264EC00E3E2B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +77,7 @@
 		0EA22DD6260273BD00E3E2B1 /* RxRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA22DD8260273CD00E3E2B1 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38458124F8CCBBF044DCA428 /* Pods_TabBarAppTemplate_LoginScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarAppTemplate_LoginScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A3FBD5C26028CC0002A3666 /* RootThirdNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootThirdNavigationController.swift; sourceTree = "<group>"; };
+		3A3FBD5C26028CC0002A3666 /* RootRecordNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRecordNavigationController.swift; sourceTree = "<group>"; };
 		3A3FBD5F26028E29002A3666 /* Test2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
 		3A3FBD6226033943002A3666 /* Test3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
 		3A3FBD652611CDB9002A3666 /* ProductSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +151,7 @@
 				0EA22DA926026A0E00E3E2B1 /* NavigationController */,
 				0EA22D70260264EC00E3E2B1 /* BaseViewController.swift */,
 				3A3FBD652611CDB9002A3666 /* ProductSearchViewController.swift */,
+				0E9BC8BA2617645A009AA2A7 /* ProfileViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -161,7 +172,8 @@
 				0EA22DAA26026A4400E3E2B1 /* BaseNavigationController.swift */,
 				0EA22DAE26026D1C00E3E2B1 /* RootNavigationController.swift */,
 				0EA22DC226026F0800E3E2B1 /* RootMoreNavigationController.swift */,
-				3A3FBD5C26028CC0002A3666 /* RootThirdNavigationController.swift */,
+				3A3FBD5C26028CC0002A3666 /* RootRecordNavigationController.swift */,
+				0E9BC8B526176073009AA2A7 /* RootProfileNavigationController.swift */,
 			);
 			path = NavigationController;
 			sourceTree = "<group>";
@@ -171,6 +183,9 @@
 			children = (
 				0EA22DBE26026E7A00E3E2B1 /* UIStoryBoard+Create.swift */,
 				0E3BEB0426126A40006DADAA /* UIViewExtension.swift */,
+				0E9BC8BD261765A3009AA2A7 /* ViewShadowExtension.swift */,
+				0E9BC8C0261765CE009AA2A7 /* UIViewRoundCornerExtension.swift */,
+				0E9BC8C3261765F6009AA2A7 /* UIColorInitExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -179,8 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				0EA22D72260264EC00E3E2B1 /* Main.storyboard */,
-				0EA22DC626026FF500E3E2B1 /* More.storyboard */,
 				0E9BC8AF26148E76009AA2A7 /* Record.storyboard */,
+				0EA22DC626026FF500E3E2B1 /* More.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -350,13 +365,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EA22D71260264EC00E3E2B1 /* BaseViewController.swift in Sources */,
+				0E9BC8C1261765CE009AA2A7 /* UIViewRoundCornerExtension.swift in Sources */,
+				0E9BC8B626176073009AA2A7 /* RootProfileNavigationController.swift in Sources */,
+				0E9BC8BE261765A3009AA2A7 /* ViewShadowExtension.swift in Sources */,
 				0EA22DAF26026D1C00E3E2B1 /* RootNavigationController.swift in Sources */,
 				0E3BEB0526126A40006DADAA /* UIViewExtension.swift in Sources */,
 				0E3BEB0226126890006DADAA /* ProductDetailViewController.swift in Sources */,
 				3A3FBD662611CDBA002A3666 /* ProductSearchViewController.swift in Sources */,
 				0EA22DB826026DD300E3E2B1 /* TestViewController.swift in Sources */,
 				0EA22DAB26026A4400E3E2B1 /* BaseNavigationController.swift in Sources */,
-				3A3FBD5D26028CC0002A3666 /* RootThirdNavigationController.swift in Sources */,
+				3A3FBD5D26028CC0002A3666 /* RootRecordNavigationController.swift in Sources */,
+				0E9BC8C4261765F6009AA2A7 /* UIColorInitExtension.swift in Sources */,
 				3A3FBD6B2611DC9D002A3666 /* RecordViewController.swift in Sources */,
 				3A3FBD6026028E29002A3666 /* Test2ViewController.swift in Sources */,
 				0E9BC8B32614925C009AA2A7 /* RecordDetailViewController.swift in Sources */,
@@ -370,6 +389,7 @@
 				0EA22D99260267DF00E3E2B1 /* TabBarController.swift in Sources */,
 				0EA22DBB26026E1D00E3E2B1 /* MoreViewController.swift in Sources */,
 				0EA22D6F260264EC00E3E2B1 /* SceneDelegate.swift in Sources */,
+				0E9BC8BB2617645A009AA2A7 /* ProfileViewController.swift in Sources */,
 				0EA22DC326026F0800E3E2B1 /* RootMoreNavigationController.swift in Sources */,
 				0EA22D77260264EC00E3E2B1 /* TabBarAppTemplate_LoginScreen.xcdatamodeld in Sources */,
 			);
