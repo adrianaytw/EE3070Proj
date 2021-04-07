@@ -9,6 +9,10 @@ import UIKit
 
 class RecordDetailViewController: BaseViewController {
 
+    @IBOutlet weak var memberNumLabel: UILabel!
+    @IBOutlet weak var memberNameLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var totalPriceLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 

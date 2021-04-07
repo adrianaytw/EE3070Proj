@@ -9,6 +9,9 @@ import UIKit
 
 class RecordViewController: BaseViewController {
 
+    @IBOutlet weak var memberNumLabel: UILabel!
+    @IBOutlet weak var memberNameLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
