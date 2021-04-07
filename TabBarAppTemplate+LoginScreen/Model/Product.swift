@@ -28,6 +28,16 @@ class Product: Object, Mappable{
         price <- map["price"]
     }
     
+    func demoProduct()->Product{
+        var demo = Product()
+        demo.productName = "TestingProduct"
+        demo.remainquantity = 5
+        demo.avaliable = true
+        demo.productCode = "T-123"
+        demo.price = 225.5
+        return demo
+    }
+    
     
 }
 

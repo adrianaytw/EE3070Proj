@@ -38,6 +38,11 @@ class SearchViewController: BaseViewController,  UITableViewDataSource, UITableV
         rootRouter?.showTest2()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      tableView.deselectRow(at: indexPath, animated: true)
+        rootRouter?.showProductDetail(product: Product().demoProduct())
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }

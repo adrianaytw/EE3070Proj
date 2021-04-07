@@ -25,6 +25,15 @@ class Record: Object, Mappable{
         purchaseQuantity <- map["purchaseQuantity"]
         product <- map["product"]
     }
+    
+    func demoRecord()->Record{
+        var demo = Record()
+        demo.purchaseDate = Date()
+        demo.purchaseAmount = 678
+        demo.purchaseQuantity = 2
+        demo.product = Product().demoProduct()
+        return demo
+    }
    
 }
 

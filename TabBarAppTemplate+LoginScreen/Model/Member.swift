@@ -24,4 +24,12 @@ class Member: Object, Mappable{
         memberNumber <- map["memberNumber"]
     }
     
+    func demoMember()-> Member{
+        var demo = Member()
+        demo.memberfirstName = "First"
+        demo.memberlastName = "Last Name"
+        demo.memberNumber = "12345678"
+        return demo
+    }
+    
 }

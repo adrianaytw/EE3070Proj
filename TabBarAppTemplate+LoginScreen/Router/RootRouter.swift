@@ -24,6 +24,18 @@ class RootRouter: Router{
         navigationController?.pushViewController(searchViewController, animated: false)
     }
     
+    func showProductDetail(product: Product){
+        guard
+            let productDetailViewController = UIStoryboard.storyboard(.main).instantiateViewController(ProductDetailViewController.self) else {
+              return
+          }
+          
+        productDetailViewController.router = self
+        productDetailViewController.product = product
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.pushViewController(productDetailViewController, animated: true)
+    }
+    
     
 
     func showTest(){

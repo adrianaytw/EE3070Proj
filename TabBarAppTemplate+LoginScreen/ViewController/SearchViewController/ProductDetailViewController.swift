@@ -16,11 +16,20 @@ class ProductDetailViewController: BaseViewController {
     @IBOutlet weak var avaliableLabel: UILabel!
     @IBOutlet weak var productTypeLabel: UILabel!
     
+    var product:Product?
+    var rootRouter: RootRouter? {
+       return router as? RootRouter
+     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        uiBind(product: product!)
 
         // Do any additional setup after loading the view.
+    }
+    
+    func uiBind(product: Product){
+        productNameLabel.text = product.productName
     }
     
 
