@@ -40,7 +40,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
         
         sidTextField.rx.text.orEmpty.asObservable()
             .subscribe(onNext: {_ in
-                self.viewModel?.sidInput.accept(self.sidTextField.text)
+                self.viewModel?.memIdInput.accept(self.sidTextField.text)
                 self.viewModel?.enableCheck()
             })
             .disposed(by: disposeBag)
@@ -134,7 +134,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
             showAlert("Please Re-Enter Password!")
         }
         
-        viewModel?.sidInput.accept(sidTextField.text)
+        viewModel?.memIdInput.accept(sidTextField.text)
         viewModel?.emailInput.accept(emailTextField.text)
         
 //        Api().checkSidValid(sid: (viewModel?.sidInput.value)!, success: {(response) in
@@ -151,6 +151,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
                     }
                     else{
                         self.showAlert(error?.localizedDescription)
+                        print(error)
                     }
 
                 }
@@ -176,14 +177,14 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
 }
 
 class SignInViewModel{
-    var sidInput = BehaviorRelay<String?>(value: nil)
+    var memIdInput = BehaviorRelay<String?>(value: nil)
     var passwordInput = BehaviorRelay<String?>(value: nil)
     var reInputPassword = BehaviorRelay<String?>(value: nil)
     var emailInput = BehaviorRelay<String?>(value: nil)
     var signInEnable = BehaviorRelay<Bool>(value: false)
     
     func enableCheck(){
-        if(sidInput.value != "" && sidInput.value?.count == 8 && passwordInput.value != "" && reInputPassword.value != "" && emailInput.value != ""){
+        if(memIdInput.value != "" && memIdInput.value?.count == 8 && passwordInput.value != "" && reInputPassword.value != "" && emailInput.value != ""){
             signInEnable.accept(true)
         }
         else{

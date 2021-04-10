@@ -25,11 +25,11 @@ class StartViewController: BaseViewController {
     
 
     @IBAction func loginClicked(_ sender: Any) {
-//        rootRouter?.showLogin()
+        rootRouter?.showLogin()
     }
     
     @IBAction func signInClicked(_ sender: Any) {
-//        rootRouter?.showSignIn()
+        rootRouter?.showSignIn()
     }
     
 
