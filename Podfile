@@ -9,8 +9,8 @@ target 'EE3070Project' do
 	pod 'ObjectMapper', '~> 3.3'
 	pod 'AlamofireObjectMapper', '~> 5.0'
 	pod 'RealmSwift'
-	pod 'RxSwift',    '~> 4.0'
-	pod 'RxCocoa',    '~> 4.0'
+	pod 'RxSwift'
+	pod 'RxCocoa'
 	pod 'RxRealm'
 	pod ‘Firebase/Auth’
 	pod 'Firebase/Core'
