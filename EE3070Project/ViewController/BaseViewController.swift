@@ -44,6 +44,12 @@ class BaseViewController: UIViewController {
     func isLoading() -> Bool {
       return !(loadingIndicator?.isHidden ?? true)
     }
+    
+    func showAlert(_ title: String?, okClicked: ((UIAlertAction) -> Void)? = nil) {
+      let alertVC = UIAlertController.init(title: title, message: nil, preferredStyle: .alert)
+      alertVC.addAction(UIAlertAction.init(title: "OK", style: .default, handler: okClicked))
+      present(alertVC, animated: true, completion: nil)
+    }
 
 
 }
