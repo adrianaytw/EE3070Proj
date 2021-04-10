@@ -44,6 +44,7 @@
 		0EA22DC326026F0800E3E2B1 /* RootMoreNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA22DC226026F0800E3E2B1 /* RootMoreNavigationController.swift */; };
 		0EA22DC726026FF500E3E2B1 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA22DC626026FF500E3E2B1 /* More.storyboard */; };
 		0EA3B61E2621A626006F0F21 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3B61D2621A626006F0F21 /* SignInViewController.swift */; };
+		0EA3B67A2621BF4C006F0F21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EA3B6792621BF4C006F0F21 /* GoogleService-Info.plist */; };
 		0EC6C4A32621986400521E17 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6C4A12621986400521E17 /* Api.swift */; };
 		0EC6C4A42621986400521E17 /* SyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6C4A22621986400521E17 /* SyncData.swift */; };
 		0EC6C4A72621988800521E17 /* ArduinoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6C4A62621988800521E17 /* ArduinoResponse.swift */; };
@@ -98,6 +99,8 @@
 		0EA22DD6260273BD00E3E2B1 /* RxRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA22DD8260273CD00E3E2B1 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA3B61D2621A626006F0F21 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0EA3B6792621BF4C006F0F21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0EA3B67C2621C188006F0F21 /* EE3070Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EE3070Project.entitlements; sourceTree = "<group>"; };
 		0EC6C4A12621986400521E17 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		0EC6C4A22621986400521E17 /* SyncData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncData.swift; sourceTree = "<group>"; };
 		0EC6C4A62621988800521E17 /* ArduinoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArduinoResponse.swift; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 				0EA22D932602677F00E3E2B1 /* Router */,
 				0EA22D91260266D100E3E2B1 /* ViewController */,
 				0EA22D6C260264EC00E3E2B1 /* AppDelegate.swift */,
+				0EA3B67C2621C188006F0F21 /* EE3070Project.entitlements */,
+				0EA3B6792621BF4C006F0F21 /* GoogleService-Info.plist */,
 				0EA22D6E260264EC00E3E2B1 /* SceneDelegate.swift */,
 				0EA22D78260264EE00E3E2B1 /* Assets.xcassets */,
 				0EA22D7A260264EE00E3E2B1 /* LaunchScreen.storyboard */,
@@ -380,6 +385,7 @@
 				0EA22D79260264EE00E3E2B1 /* Assets.xcassets in Resources */,
 				0EA22D74260264EC00E3E2B1 /* Main.storyboard in Resources */,
 				0E9BC8B026148E76009AA2A7 /* Record.storyboard in Resources */,
+				0EA3B67A2621BF4C006F0F21 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +625,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EE3070Project/EE3070Project.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JQ7HF2Q6L;
 				INFOPLIST_FILE = EE3070Project/Info.plist;
@@ -639,6 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EE3070Project/EE3070Project.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JQ7HF2Q6L;
 				INFOPLIST_FILE = EE3070Project/Info.plist;

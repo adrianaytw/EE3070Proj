@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class MoreViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -31,7 +33,7 @@ class MoreViewController: BaseViewController, UITableViewDataSource, UITableView
         if(indexPath.row == 1){
             let controller = UIAlertController(title: "Confirm Logout?", message: "All Data that stored in local will be removed and will not be Recovered.", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-//                self.logout()
+                self.logout()
 
             }
             controller.addAction(okAction)
@@ -65,7 +67,7 @@ class MoreViewController: BaseViewController, UITableViewDataSource, UITableView
         cell.settingLabel.text = self.settingContentList[indexPath.row]
         return cell
     }
-    /*
+    
     func logout(){
         
         do {
@@ -86,5 +88,5 @@ class MoreViewController: BaseViewController, UITableViewDataSource, UITableView
         let initial = storyboard.instantiateInitialViewController()
         UIApplication.shared.keyWindow?.rootViewController = initial
     }
-     */
+     
 }

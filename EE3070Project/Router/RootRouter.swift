@@ -10,6 +10,46 @@ class RootRouter: Router{
     
     //use root router to show screen
     
+    var moreNavigationController: UINavigationController? {
+        return RootMoreNavigationController() as? UINavigationController
+    }
+    
+    func showStart(){
+        guard
+          let startViewController = UIStoryboard.storyboard(.login).instantiateViewController(StartViewController.self) else {
+            return
+        }
+
+        startViewController.router = self
+        startViewController.modalPresentationStyle = .fullScreen
+        startViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(startViewController, animated: false)
+    }
+    
+    func showLogin(){
+        guard
+          let loginViewController = UIStoryboard.storyboard(.login).instantiateViewController(LoginViewController.self) else {
+            return
+        }
+
+        loginViewController.router = self
+//        loginViewController.hidesBottomBarWhenPushed = true
+        loginViewController.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(loginViewController, animated: true)
+    }
+    
+    func showSignIn(){
+        guard
+          let signInViewController = UIStoryboard.storyboard(.login).instantiateViewController(SignInViewController.self) else {
+            return
+        }
+
+        signInViewController.router = self
+//        signInViewController.hidesBottomBarWhenPushed = true
+        signInViewController.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(signInViewController, animated: true)
+    }
+    
     func showSearch(animated: Bool, complete: (() -> Void)? = nil ){
         guard
           let searchViewController = UIStoryboard.storyboard(.main).instantiateViewController(SearchViewController.self) else {

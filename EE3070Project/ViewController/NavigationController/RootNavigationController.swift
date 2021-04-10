@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class RootNavigationController: UINavigationController {
 
@@ -14,8 +16,11 @@ class RootNavigationController: UINavigationController {
     override func viewDidLoad() {
            super.viewDidLoad()
            router = RootRouter(self)
+        if(Auth.auth().currentUser != nil){
                 router?.showSearch(animated: true)
-    
+        }else{
+            router?.showStart()
+        }
             }
     /*
     // MARK: - Navigation
