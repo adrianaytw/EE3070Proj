@@ -15,13 +15,13 @@ import FirebaseAuth
 class LoginViewController: BaseViewController, UITextFieldDelegate {
 
     var disposeBag = DisposeBag()
-    var sidInput = BehaviorRelay<String?>(value: nil)
+    var memIDInput = BehaviorRelay<String?>(value: nil)
     var emailInput = BehaviorRelay<String?>(value: nil)
     var passwordInput = BehaviorRelay<String?>(value: nil)
     var loginEnable = BehaviorRelay<Bool>(value: false)
     
     func enableCheck(){
-        if(sidInput.value != "" && sidInput.value?.count == 8 && emailInput.value != "" && passwordInput.value != ""){
+        if(memIDInput.value != "" && memIDInput.value?.count == 8 && emailInput.value != "" && passwordInput.value != ""){
             loginEnable.accept(true)
         }
         else{
@@ -52,7 +52,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         
         sidTextField.rx.text.orEmpty.asObservable()
             .subscribe(onNext: {_ in
-                self.sidInput.accept(self.sidTextField.text)
+                self.memIDInput.accept(self.sidTextField.text)
                 self.enableCheck()
             })
             .disposed(by: disposeBag)
@@ -108,7 +108,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         Auth.auth().signIn(withEmail: (emailInput.value)!, password: (passwordInput.value)!) { (user, error) in
             if error == nil {
 //                UserDefaults.standard.set(true, forKey: "loggedIn")
-                UserDefaults.standard.set(self.sidInput.value, forKey: "studentId")
+                UserDefaults.standard.set(self.memIDInput.value, forKey: "memberId")
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let initial = storyboard.instantiateInitialViewController()
                 UIApplication.shared.keyWindow?.rootViewController = initial

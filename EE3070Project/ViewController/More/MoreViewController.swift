@@ -44,7 +44,7 @@ class MoreViewController: BaseViewController, UITableViewDataSource, UITableView
         }else if(indexPath.row == 2){
             let controller = UIAlertController(title: "Confirm Reset Password?", message: "All data that stored in local will be removed and will not be Recovered.", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-//                self.rootRouter?.showReset()
+                self.rootRouter?.showReset()
             }
             controller.addAction(okAction)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -77,7 +77,7 @@ class MoreViewController: BaseViewController, UITableViewDataSource, UITableView
                     print ("Error signing out: %@", signOutError)
         }
         
-        UserDefaults.standard.set("", forKey: "studentId")
+        UserDefaults.standard.set("", forKey: "memberId")
 //        SyncData.writeRealmAsync({ (realm) in
 //            realm.delete(realm.objects(Student.self))
 //            realm.delete(realm.objects(Attendance.self))

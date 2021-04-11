@@ -101,6 +101,17 @@ class RootRouter: Router{
         navigationController?.pushViewController(moreViewController, animated: false)
     }
     
+    func showReset(){
+        guard
+            let resetPwViewController = UIStoryboard.storyboard(.more).instantiateViewController(ResetPwViewController.self) else {
+              return
+          }
+          
+        resetPwViewController.router = self
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.pushViewController(resetPwViewController, animated: true)
+    }
+    
     func showRecord(){
         guard
             let recordViewController = UIStoryboard.storyboard(.record).instantiateViewController(RecordViewController.self) else { // UIStoryboard.storyboard(.more) mean using More storyboard

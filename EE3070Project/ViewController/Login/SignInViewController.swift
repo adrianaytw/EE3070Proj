@@ -12,7 +12,6 @@ import FirebaseAuth
 
 class SignInViewController: BaseViewController, UITextFieldDelegate {
     
-    var viewModel: SignInViewModel?
     var disposeBag = DisposeBag()
 
     @IBOutlet weak var sidTextField: UITextField!
@@ -27,6 +26,21 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
        return router as? RootRouter
      }
     
+    var memIdInput = BehaviorRelay<String?>(value: nil)
+    var passwordInput = BehaviorRelay<String?>(value: nil)
+    var reInputPassword = BehaviorRelay<String?>(value: nil)
+    var emailInput = BehaviorRelay<String?>(value: nil)
+    var signInEnable = BehaviorRelay<Bool>(value: false)
+    
+    func enableCheck(){
+        if(memIdInput.value != "" && memIdInput.value?.count == 8 && passwordInput.value != "" && reInputPassword.value != "" && emailInput.value != ""){
+            signInEnable.accept(true)
+        }
+        else{
+            signInEnable.accept(false)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,41 +48,40 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         reEnterTextField.delegate = self
-        viewModel = SignInViewModel()
         self.navigationItem.title = "Register"
         configureUI()
         
         sidTextField.rx.text.orEmpty.asObservable()
             .subscribe(onNext: {_ in
-                self.viewModel?.memIdInput.accept(self.sidTextField.text)
-                self.viewModel?.enableCheck()
+                self.memIdInput.accept(self.sidTextField.text)
+                self.enableCheck()
             })
             .disposed(by: disposeBag)
         
         emailTextField.rx.text.orEmpty.asObservable()
             .subscribe(onNext: {_ in
-                self.viewModel?.emailInput.accept(self.emailTextField.text)
-                self.viewModel?.enableCheck()
+                self.emailInput.accept(self.emailTextField.text)
+                self.enableCheck()
             })
             .disposed(by: disposeBag)
         
         passwordTextField.rx.text.orEmpty.asObservable()
             .subscribe(onNext: {_ in
-                self.viewModel?.passwordInput.accept(self.passwordTextField.text)
-                self.viewModel?.enableCheck()
+                self.passwordInput.accept(self.passwordTextField.text)
+                self.enableCheck()
             })
             .disposed(by: disposeBag)
         
         reEnterTextField.rx.text.orEmpty.asObservable()
             .subscribe(onNext: {_ in
-                self.viewModel?.reInputPassword.accept(self.reEnterTextField.text)
-                self.viewModel?.enableCheck()
+                self.reInputPassword.accept(self.reEnterTextField.text)
+                self.enableCheck()
             })
             .disposed(by: disposeBag)
         
         
-        viewModel?.signInEnable.asObservable().subscribe(onNext: { (_) in
-            self.signInButton.isEnabled = (self.viewModel?.signInEnable.value)!
+        signInEnable.asObservable().subscribe(onNext: { (_) in
+            self.signInButton.isEnabled = (self.signInEnable.value)
             if (!(self.signInButton.isEnabled)){
 //                self.signInButton.titleLabel?.textColor = UIColor.init(red: 128, green: 128, blue: 128)
                 self.buttonBackgroundView.backgroundColor = UIColor.init(red: 196/255, green: 196/255, blue: 196/255, alpha: 0.2)
@@ -111,22 +124,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
         }
         return true
     }
-//    @IBAction func sidChanged(_ sender: Any) {
-//        viewModel?.sidInput.value = sidTextField.text
-//        viewModel?.enableCheck()
-//    }
-//    @IBAction func emailChanged(_ sender: Any) {
-//        viewModel?.emailInput.value = emailTextField.text
-//        viewModel?.enableCheck()
-//    }
-//    @IBAction func reEnterChanged(_ sender: Any) {
-//        viewModel?.reInputPassword.value = reEnterTextField.text
-//        viewModel?.enableCheck()
-//    }
-//    @IBAction func passwordChanged(_ sender: Any) {
-//        viewModel?.passwordInput.value = passwordTextField.text
-//        viewModel?.enableCheck()
-//    }
+
     
     @IBAction func signInClicked(_ sender: Any) {
 
@@ -134,8 +132,8 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
             showAlert("Please Re-Enter Password!")
         }
         
-        viewModel?.memIdInput.accept(sidTextField.text)
-        viewModel?.emailInput.accept(emailTextField.text)
+        memIdInput.accept(sidTextField.text)
+        emailInput.accept(emailTextField.text)
         
 //        Api().checkSidValid(sid: (viewModel?.sidInput.value)!, success: {(response) in
 //            guard let valid = response else{
@@ -145,7 +143,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
 //
 //            if (valid.valid){
 
-                Auth.auth().createUser(withEmail: (self.viewModel?.emailInput.value)!, password: (self.viewModel?.passwordInput.value)!){ (user, error) in
+                Auth.auth().createUser(withEmail: (self.emailInput.value)!, password: (self.passwordInput.value)!){ (user, error) in
                     if error == nil {
                         self.navigationController?.popViewController(animated: true)
                     }
@@ -176,20 +174,3 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
     }
 }
 
-class SignInViewModel{
-    var memIdInput = BehaviorRelay<String?>(value: nil)
-    var passwordInput = BehaviorRelay<String?>(value: nil)
-    var reInputPassword = BehaviorRelay<String?>(value: nil)
-    var emailInput = BehaviorRelay<String?>(value: nil)
-    var signInEnable = BehaviorRelay<Bool>(value: false)
-    
-    func enableCheck(){
-        if(memIdInput.value != "" && memIdInput.value?.count == 8 && passwordInput.value != "" && reInputPassword.value != "" && emailInput.value != ""){
-            signInEnable.accept(true)
-        }
-        else{
-            signInEnable.accept(false)
-        }
-    }
-    
-}
