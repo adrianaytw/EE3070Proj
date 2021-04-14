@@ -13,6 +13,7 @@ target 'EE3070Project' do
 	pod 'RxCocoa'
 	pod 'RxRealm'
 	pod ‘Firebase/Auth’
+	pod 'Firebase/Firestore'
 	pod 'Firebase/Core'
 	pod 'Kingfisher', '~> 4.0'
 

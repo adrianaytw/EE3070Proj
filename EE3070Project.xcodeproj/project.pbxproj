@@ -45,6 +45,7 @@
 		0EA22DC726026FF500E3E2B1 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA22DC626026FF500E3E2B1 /* More.storyboard */; };
 		0EA3B61E2621A626006F0F21 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3B61D2621A626006F0F21 /* SignInViewController.swift */; };
 		0EA3B67A2621BF4C006F0F21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EA3B6792621BF4C006F0F21 /* GoogleService-Info.plist */; };
+		0EA3B69D26237263006F0F21 /* ResetPwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3B69C26237263006F0F21 /* ResetPwViewController.swift */; };
 		0EC6C4A32621986400521E17 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6C4A12621986400521E17 /* Api.swift */; };
 		0EC6C4A42621986400521E17 /* SyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6C4A22621986400521E17 /* SyncData.swift */; };
 		0EC6C4A72621988800521E17 /* ArduinoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6C4A62621988800521E17 /* ArduinoResponse.swift */; };
@@ -56,8 +57,7 @@
 		3A3FBD6326033943002A3666 /* Test3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FBD6226033943002A3666 /* Test3ViewController.swift */; };
 		3A3FBD662611CDBA002A3666 /* ProductSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FBD652611CDB9002A3666 /* ProductSearchViewController.swift */; };
 		3A3FBD6B2611DC9D002A3666 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FBD6A2611DC9D002A3666 /* RecordViewController.swift */; };
-		3ABC6FF52621BC8C00233944 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ABC6FF42621BC8C00233944 /* GoogleService-Info.plist */; };
-		B25D35E3F6330475C901BC1B /* Pods_EE3070Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFDD10907C3C8E2841FFE5ED /* Pods_EE3070Project.framework */; };
+		6F72E92E0DB8E0808F68B7DF /* Pods_EE3070Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5853D663912919AAE567B7B /* Pods_EE3070Project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,21 +102,21 @@
 		0EA3B61D2621A626006F0F21 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		0EA3B6792621BF4C006F0F21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EA3B67C2621C188006F0F21 /* EE3070Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EE3070Project.entitlements; sourceTree = "<group>"; };
+		0EA3B69C26237263006F0F21 /* ResetPwViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPwViewController.swift; sourceTree = "<group>"; };
 		0EC6C4A12621986400521E17 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		0EC6C4A22621986400521E17 /* SyncData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncData.swift; sourceTree = "<group>"; };
 		0EC6C4A62621988800521E17 /* ArduinoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArduinoResponse.swift; sourceTree = "<group>"; };
 		0EC6C4A926219D6900521E17 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0EC6C4C526219E5100521E17 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0EC6C4C926219E8900521E17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1322A33584A9436EBD72A597 /* Pods-EE3070Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EE3070Project.debug.xcconfig"; path = "Target Support Files/Pods-EE3070Project/Pods-EE3070Project.debug.xcconfig"; sourceTree = "<group>"; };
+		21BA810D0302CE0966064451 /* Pods-EE3070Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EE3070Project.release.xcconfig"; path = "Target Support Files/Pods-EE3070Project/Pods-EE3070Project.release.xcconfig"; sourceTree = "<group>"; };
 		3A3FBD5C26028CC0002A3666 /* RootRecordNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRecordNavigationController.swift; sourceTree = "<group>"; };
 		3A3FBD5F26028E29002A3666 /* Test2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
 		3A3FBD6226033943002A3666 /* Test3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
 		3A3FBD652611CDB9002A3666 /* ProductSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchViewController.swift; sourceTree = "<group>"; };
 		3A3FBD6A2611DC9D002A3666 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
-		3ABC6FF42621BC8C00233944 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6F7516CDB54E93FF1A69565E /* Pods-EE3070Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EE3070Project.debug.xcconfig"; path = "Target Support Files/Pods-EE3070Project/Pods-EE3070Project.debug.xcconfig"; sourceTree = "<group>"; };
-		DFDD10907C3C8E2841FFE5ED /* Pods_EE3070Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EE3070Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E44FECAE81DB1F7CA2B00506 /* Pods-EE3070Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EE3070Project.release.xcconfig"; path = "Target Support Files/Pods-EE3070Project/Pods-EE3070Project.release.xcconfig"; sourceTree = "<group>"; };
+		C5853D663912919AAE567B7B /* Pods_EE3070Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EE3070Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +125,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E9BC91926219598009AA2A7 /* RxRealm.framework in Frameworks */,
+				6F72E92E0DB8E0808F68B7DF /* Pods_EE3070Project.framework in Frameworks */,
 				0E9BC91A2621959B009AA2A7 /* RealmSwift.framework in Frameworks */,
-				B25D35E3F6330475C901BC1B /* Pods_EE3070Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +189,6 @@
 				0EA22D6E260264EC00E3E2B1 /* SceneDelegate.swift */,
 				0EA22D78260264EE00E3E2B1 /* Assets.xcassets */,
 				0EA22D7A260264EE00E3E2B1 /* LaunchScreen.storyboard */,
-				3ABC6FF42621BC8C00233944 /* GoogleService-Info.plist */,
 				0EA22D7D260264EE00E3E2B1 /* Info.plist */,
 				0EA22D75260264EC00E3E2B1 /* EE3070Project.xcdatamodeld */,
 			);
@@ -270,6 +269,7 @@
 		0EA22DCA2602711300E3E2B1 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				0EA3B69C26237263006F0F21 /* ResetPwViewController.swift */,
 				0EA22DBA26026E1D00E3E2B1 /* MoreViewController.swift */,
 				3A3FBD6226033943002A3666 /* Test3ViewController.swift */,
 			);
@@ -307,8 +307,8 @@
 		9320FD363430F62906372593 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6F7516CDB54E93FF1A69565E /* Pods-EE3070Project.debug.xcconfig */,
-				E44FECAE81DB1F7CA2B00506 /* Pods-EE3070Project.release.xcconfig */,
+				1322A33584A9436EBD72A597 /* Pods-EE3070Project.debug.xcconfig */,
+				21BA810D0302CE0966064451 /* Pods-EE3070Project.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -318,7 +318,7 @@
 			children = (
 				0EA22DD8260273CD00E3E2B1 /* RealmSwift.framework */,
 				0EA22DD6260273BD00E3E2B1 /* RxRealm.framework */,
-				DFDD10907C3C8E2841FFE5ED /* Pods_EE3070Project.framework */,
+				C5853D663912919AAE567B7B /* Pods_EE3070Project.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -330,11 +330,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EA22D80260264EE00E3E2B1 /* Build configuration list for PBXNativeTarget "EE3070Project" */;
 			buildPhases = (
-				68EC9A17C544AB5C82B54A5D /* [CP] Check Pods Manifest.lock */,
+				F940797D9F8E52574AA8F4FC /* [CP] Check Pods Manifest.lock */,
 				0EA22D65260264EC00E3E2B1 /* Sources */,
 				0EA22D66260264EC00E3E2B1 /* Frameworks */,
 				0EA22D67260264EC00E3E2B1 /* Resources */,
-				D2F733633C46E829DDBF3A0A /* [CP] Embed Pods Frameworks */,
+				08A10BBCC2DE2F5B217C2DE4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,18 +388,31 @@
 				0EA22D79260264EE00E3E2B1 /* Assets.xcassets in Resources */,
 				0EA22D74260264EC00E3E2B1 /* Main.storyboard in Resources */,
 				0E9BC8B026148E76009AA2A7 /* Record.storyboard in Resources */,
-<<<<<<< HEAD
-				3ABC6FF52621BC8C00233944 /* GoogleService-Info.plist in Resources */,
-=======
 				0EA3B67A2621BF4C006F0F21 /* GoogleService-Info.plist in Resources */,
->>>>>>> 396cba30690504442229335f5f52ac43139568a8
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		68EC9A17C544AB5C82B54A5D /* [CP] Check Pods Manifest.lock */ = {
+		08A10BBCC2DE2F5B217C2DE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EE3070Project/Pods-EE3070Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EE3070Project/Pods-EE3070Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EE3070Project/Pods-EE3070Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F940797D9F8E52574AA8F4FC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,23 +432,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D2F733633C46E829DDBF3A0A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EE3070Project/Pods-EE3070Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EE3070Project/Pods-EE3070Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EE3070Project/Pods-EE3070Project-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -460,6 +456,7 @@
 				0EA22DB826026DD300E3E2B1 /* TestViewController.swift in Sources */,
 				0EA22DAB26026A4400E3E2B1 /* BaseNavigationController.swift in Sources */,
 				0EC6C4A72621988800521E17 /* ArduinoResponse.swift in Sources */,
+				0EA3B69D26237263006F0F21 /* ResetPwViewController.swift in Sources */,
 				3A3FBD5D26028CC0002A3666 /* RootRecordNavigationController.swift in Sources */,
 				0E9BC8C4261765F6009AA2A7 /* UIColorInitExtension.swift in Sources */,
 				3A3FBD6B2611DC9D002A3666 /* RecordViewController.swift in Sources */,
@@ -628,7 +625,7 @@
 		};
 		0EA22D81260264EE00E3E2B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F7516CDB54E93FF1A69565E /* Pods-EE3070Project.debug.xcconfig */;
+			baseConfigurationReference = 1322A33584A9436EBD72A597 /* Pods-EE3070Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -649,7 +646,7 @@
 		};
 		0EA22D82260264EE00E3E2B1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E44FECAE81DB1F7CA2B00506 /* Pods-EE3070Project.release.xcconfig */;
+			baseConfigurationReference = 21BA810D0302CE0966064451 /* Pods-EE3070Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -19,7 +19,6 @@ class ResetPwViewController: BaseViewController, UITextFieldDelegate {
     var rootRouter: RootRouter? {
       return router as? RootRouter
     }
-    var viewModel : ResetPwViewModel?
     var disposeBag = DisposeBag()
     
     var passwordInput = BehaviorRelay<String?>(value: nil)
@@ -37,7 +36,7 @@ class ResetPwViewController: BaseViewController, UITextFieldDelegate {
         super.viewDidLoad()
         passwordTextField.delegate = self
         reEnterTextField.delegate = self
-        viewModel = ResetPwViewModel()
+
         self.navigationItem.title = "Reset Password"
         configureUI()
         
@@ -164,7 +163,3 @@ class ResetPwViewController: BaseViewController, UITextFieldDelegate {
     
 }
 
-class ResetPwViewModel{
-
-    
-}
