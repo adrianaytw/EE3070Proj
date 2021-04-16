@@ -15,6 +15,7 @@ class SearchViewController: BaseViewController,  UITableViewDataSource, UITableV
 
     var products: Results<Product>?
     var productList =  BehaviorRelay<[Product?]>(value: [nil])
+    var disposeBag = DisposeBag()
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var testButton: UIButton!
@@ -45,16 +46,10 @@ class SearchViewController: BaseViewController,  UITableViewDataSource, UITableV
         }
         
         uiInit()
-        products?.observe { [weak self] (changes: RealmCollectionChange) in
-            switch changes{
-            case .initial(let products):
-                self?.tableView.reloadData()
-            case .update(let products, let deletion, let insertions , let modifications):
-                self?.tableView.reloadData()
-            case .error(let error):
-                self?.showAlert(error.localizedDescription)
-            }
-        }
+        productList.asObservable().subscribe(onNext: { classValue in
+            
+            self.tableView.reloadData()
+        }).disposed(by: disposeBag)
         
        
 
@@ -88,6 +83,16 @@ class SearchViewController: BaseViewController,  UITableViewDataSource, UITableV
         }
         cell.uiBind(product: (products?[indexPath.row])!)
           return cell
+    }
+    
+    @IBAction func refreshClicked(_ sender: Any) {
+        self.getProducts(completed: { [weak self] (failReason) in
+            
+            if failReason != nil {
+              self?.showErrorAlert(reason: failReason, showCache: true, okClicked: nil)
+            }
+
+     })
     }
     
     func getUser(completed: ((SyncDataFailReason?) -> Void)?){

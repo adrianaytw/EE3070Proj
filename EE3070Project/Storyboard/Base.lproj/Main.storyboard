@@ -23,7 +23,7 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="A1o-0N-ADs" kind="relationship" relationship="viewControllers" id="zzu-uG-pX4"/>
+                        <segue destination="OQ4-Go-3nh" kind="relationship" relationship="viewControllers" id="dBY-ao-4PS"/>
                         <segue destination="sUp-1d-wQf" kind="relationship" relationship="viewControllers" id="X8l-gL-mMz"/>
                         <segue destination="UTG-tg-VIK" kind="relationship" relationship="viewControllers" id="YNa-cP-cCL"/>
                     </connections>
@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="-935" y="-496"/>
         </scene>
-        <!--Search-->
+        <!--Products-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="BYZ-38-t0r" customClass="SearchViewController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,7 +68,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jRQ-Dx-LFD">
-                                <rect key="frame" x="15" y="113" width="384" height="729"/>
+                                <rect key="frame" x="15" y="145" width="384" height="697"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchListTableViewCell" rowHeight="261" id="n5V-Bi-Hn5" customClass="SearchListTableViewCell" customModule="EE3070Project" customModuleProvider="target">
@@ -139,6 +139,22 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="due-mB-LC8">
+                                <rect key="frame" x="20" y="98" width="374" height="32"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Refresh">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="refreshClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OiT-Hw-Jjm"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKO-Bm-fKC">
                                 <rect key="frame" x="150" y="144" width="214" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -154,6 +170,7 @@
                             <constraint firstItem="PKO-Bm-fKC" firstAttribute="top" secondItem="WCp-qN-vTI" secondAttribute="bottom" constant="100" id="5Ys-tz-OLN"/>
                             <constraint firstItem="3xi-IX-J6e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="D9K-mL-tVb"/>
                             <constraint firstItem="PKO-Bm-fKC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="DSd-sB-Xg6"/>
+                            <constraint firstItem="jRQ-Dx-LFD" firstAttribute="top" secondItem="due-mB-LC8" secondAttribute="bottom" constant="15" id="IbY-o0-ES7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WCp-qN-vTI" secondAttribute="trailing" constant="100" id="JyK-zk-pbU"/>
                             <constraint firstItem="WCp-qN-vTI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="NbZ-Vi-i1F"/>
                             <constraint firstItem="WCp-qN-vTI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Obo-dA-xd2"/>
@@ -161,12 +178,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PKO-Bm-fKC" secondAttribute="trailing" constant="50" id="RUb-hf-h58"/>
                             <constraint firstItem="PKO-Bm-fKC" firstAttribute="top" secondItem="3xi-IX-J6e" secondAttribute="bottom" id="ZAu-7h-QuB"/>
                             <constraint firstItem="jRQ-Dx-LFD" firstAttribute="top" secondItem="PKO-Bm-fKC" secondAttribute="bottom" id="bCN-IN-tL9"/>
+                            <constraint firstItem="due-mB-LC8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="brg-Px-5ro"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="due-mB-LC8" secondAttribute="trailing" constant="20" id="btx-Ta-60M"/>
                             <constraint firstItem="jRQ-Dx-LFD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-15" id="bwE-fc-Y7y"/>
                             <constraint firstAttribute="trailing" secondItem="3xi-IX-J6e" secondAttribute="trailing" constant="10" id="bwU-ho-nXt"/>
                             <constraint firstItem="3xi-IX-J6e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="e6t-tE-UPe"/>
                             <constraint firstItem="jRQ-Dx-LFD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="f5d-sK-bkH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jRQ-Dx-LFD" secondAttribute="bottom" constant="20" id="fWS-Sa-WWt"/>
-                            <constraint firstItem="jRQ-Dx-LFD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="jkw-ud-3lZ"/>
+                            <constraint firstItem="due-mB-LC8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="gRK-tl-hzH"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -176,7 +195,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="DpK-7Y-vIW"/>
+                    <navigationItem key="navigationItem" title="Products" id="DpK-7Y-vIW"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="searchBar" destination="3xi-IX-J6e" id="HNB-us-X8a"/>
@@ -474,12 +493,11 @@
             </objects>
             <point key="canvasLocation" x="-936" y="957"/>
         </scene>
-        <!--Item-->
+        <!--Products-->
         <scene sceneID="TFs-l8-Zz7">
             <objects>
                 <navigationController id="OQ4-Go-3nh" customClass="RootNavigationController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Qmd-Sw-d9d"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBarItem key="tabBarItem" title="Products" image="tray.full.fill" catalog="system" id="Qmd-Sw-d9d"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rLv-EX-aQu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -767,7 +785,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qaN-QR-sV6" secondAttribute="bottom" constant="50" id="3A2-Md-xF8"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qaN-QR-sV6" secondAttribute="bottom" constant="30" id="3A2-Md-xF8"/>
                                     <constraint firstItem="qaN-QR-sV6" firstAttribute="centerX" secondItem="9aI-At-LLt" secondAttribute="centerX" id="8lY-q7-mmu"/>
                                     <constraint firstItem="qaN-QR-sV6" firstAttribute="leading" secondItem="9aI-At-LLt" secondAttribute="leading" constant="15" id="JoU-le-1Wn"/>
                                     <constraint firstAttribute="trailing" secondItem="qaN-QR-sV6" secondAttribute="trailing" constant="15" id="Tae-Yd-iKt"/>
@@ -813,6 +831,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fPM-pU-Wdc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemYellowColor"/>
                     </navigationBar>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9N-VW-rtn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -823,6 +842,7 @@
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="tray.full.fill" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

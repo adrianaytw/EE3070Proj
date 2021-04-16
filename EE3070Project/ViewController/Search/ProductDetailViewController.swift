@@ -33,13 +33,15 @@ class ProductDetailViewController: BaseViewController {
         productCodeLabel.text = product.productCode
         priceLabel.text = "$ \(product.price)"
         if product.avaliable{
-            availableView.borderColor = UIColor.green
+            availableView.borderWidth = 0
+            availableView.backgroundColor = UIColor.green
             avaliableLabel.text = "Avaliable"
-            avaliableLabel.textColor = UIColor.green
+            avaliableLabel.textColor = UIColor.white
         }else{
-            availableView.borderColor = UIColor.red
+            availableView.borderWidth = 0
+            availableView.backgroundColor = UIColor.red
             avaliableLabel.text = "Not Avaliable"
-            avaliableLabel.textColor = UIColor.red
+            avaliableLabel.textColor = UIColor.white
         }
         quantityLabel.text = "\(product.remainquantity)"
     }
