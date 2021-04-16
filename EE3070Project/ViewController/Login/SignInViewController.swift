@@ -178,7 +178,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
                     if error == nil {
                         self.navigationController?.popViewController(animated: true)
                         db.collection("users").addDocument(data: [
-                            "name": nameInput.value!,
+                            "memberName": nameInput.value!,
                             "memId": memIdInput.value!,
                             "email": emailInput.value!,
                             "phone": phoneInput.value!,
@@ -189,6 +189,7 @@ class SignInViewController: BaseViewController, UITextFieldDelegate {
                                 print(error)
                             }
                         }
+
                     }
                     else{
                         self.showAlert(error?.localizedDescription)

@@ -8,6 +8,10 @@ import Foundation
 import RealmSwift
 import Alamofire
 import ObjectMapper
+import SwiftyJSON
+import FirebaseFirestore
+import FirebaseCore
+import Firebase
 import AlamofireObjectMapper
 
 enum SyncDataFailReason: Error {
@@ -18,6 +22,8 @@ enum SyncDataFailReason: Error {
 
 
 class SyncData {
+    
+    var db = Firestore.firestore()
     static var firstSync : Bool  = false
     
     static var realmBackgroundQueue = DispatchQueue(label: ".realm", qos: .background)
@@ -53,32 +59,74 @@ class SyncData {
       return .other
     }
     
-//    func syncStudent(sid: String, completed:((SyncDataFailReason?) -> Void)?) {
-//        Api().getStudentInfo(sid: sid, success: {(response) in
-//            guard let student = response else {
-//                completed?(nil)
-//                return
-//            }
-//            SyncData.writeRealmAsync({ (realm) in
-//              realm.delete(realm.objects(Student.self))
-//                realm.add(student)
-//            }, completed:{
-//                completed?(nil)
-//              })
-//        }, fail: { (error, resposne) in
-//            print("Reqeust Error: \(String(describing: error))")
-//            let reason = self.failReason(error: error, resposne: resposne)
-////            SyncData.writeRealmAsync({ (realm) in
-////              realm.delete(realm.objects(Student.self))
-////                realm.add(Student().demoStudent())
-////
-////            }, completed:{
-////                completed?(nil)
-////              })
-//            completed?(nil)
-//
-//          })
-////        Global.user.value = Student().demoStudent()
-//
-//    }
+    func syncProducts(completed:((SyncDataFailReason?) -> Void)?) {
+        let ref = db.collection("products")
+        ref.getDocuments{ (querySnapshot, error) in
+            if let querySnapshot = querySnapshot {
+                SyncData.writeRealmAsync({ (realm) in
+                    realm.delete(realm.objects(Product.self))
+                    for document in querySnapshot.documents {
+                        let dict = document.data() as NSDictionary
+//                        JSONSerialization().
+//                            print(JSON(document.data()))
+//                        realm.delete(realm.objects(Member.self))
+                        realm.add(Product(JSON: document.data())!)
+                        print(realm.objects(Product.self)[0])
+                            
+                    }
+//                        print(realm.objects(Product.self))
+                }, completed:{
+                        completed?(nil)
+                })
+                
+            }
+        }
+    }
+    
+    func syncUser(completed:((SyncDataFailReason?) -> Void)?) {
+        let ref = db.collection("users")
+        ref.whereField("uid", isEqualTo: Auth.auth().currentUser?.uid).getDocuments{ (querySnapshot, error) in
+            if let querySnapshot = querySnapshot {
+                for document in querySnapshot.documents {
+                    SyncData.writeRealmAsync({ (realm) in
+                        let dict = document.data() as NSDictionary
+//                        JSONSerialization().
+                        realm.delete(realm.objects(Member.self))
+                        realm.add(Member(JSON: document.data())!)
+                        }, completed:{
+                            completed?(nil)
+                          })
+                }
+            }
+        }
+    }
 }
+
+extension NSDictionary{
+    func JsonString() -> String
+    {
+        do{
+        let jsonData: Data = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+        return String.init(data: jsonData, encoding: .utf8)!
+        }
+        catch
+        {
+            return "error converting"
+        }
+    }
+}
+
+extension String{
+func dictionaryValue() -> [String: AnyObject]
+{
+    if let data = self.data(using: String.Encoding.utf8) {
+        do {
+            let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: AnyObject]
+            return json!
+
+        } catch {
+            print("Error converting to JSON")
+        }
+    }
+    return NSDictionary() as! [String : AnyObject]
+} }

@@ -16,7 +16,10 @@ class SearchListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    func uiBind(product: Product){
+        productNameLabel.text = product.productName
+    }
 
 
 }

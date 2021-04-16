@@ -24,7 +24,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="A1o-0N-ADs" kind="relationship" relationship="viewControllers" id="zzu-uG-pX4"/>
-                        <segue destination="mZt-Nl-6gp" kind="relationship" relationship="viewControllers" id="w4T-Qw-MyE"/>
                         <segue destination="sUp-1d-wQf" kind="relationship" relationship="viewControllers" id="X8l-gL-mMz"/>
                         <segue destination="UTG-tg-VIK" kind="relationship" relationship="viewControllers" id="YNa-cP-cCL"/>
                     </connections>
@@ -36,7 +35,7 @@
         <!--Item-->
         <scene sceneID="i0y-PL-WTl">
             <objects>
-                <navigationController id="A1o-0N-ADs" customClass="RootNavigationController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="A1o-0N-ADs" customClass="RootNavigationController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="fxS-wo-yIP">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
@@ -53,7 +52,7 @@
         <!--Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" id="BYZ-38-t0r" customClass="SearchViewController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="BYZ-38-t0r" customClass="SearchViewController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,10 +68,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jRQ-Dx-LFD">
-                                <rect key="frame" x="15" y="154" width="384" height="688"/>
+                                <rect key="frame" x="15" y="113" width="384" height="729"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchListTableViewCell" rowHeight="261" id="n5V-Bi-Hn5" customClass="SearchListTableViewCell" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchListTableViewCell" rowHeight="261" id="n5V-Bi-Hn5" customClass="SearchListTableViewCell" customModule="EE3070Project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="384" height="261"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n5V-Bi-Hn5" id="8Sl-R9-gSd">
@@ -128,9 +127,6 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="zel-Wk-N9O" firstAttribute="top" secondItem="8Sl-R9-gSd" secondAttribute="top" constant="3" id="7Mm-91-l96"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="zel-Wk-N9O" secondAttribute="trailing" id="96E-Be-qFj"/>
-                                                <constraint firstAttribute="bottom" secondItem="zel-Wk-N9O" secondAttribute="bottom" constant="5" id="Cbz-tQ-XIs"/>
-                                                <constraint firstItem="zel-Wk-N9O" firstAttribute="leading" secondItem="8Sl-R9-gSd" secondAttribute="leadingMargin" id="Egd-az-K1K"/>
                                                 <constraint firstItem="zel-Wk-N9O" firstAttribute="top" secondItem="8Sl-R9-gSd" secondAttribute="top" constant="3" id="Llm-Bk-rTg"/>
                                                 <constraint firstItem="zel-Wk-N9O" firstAttribute="leading" secondItem="8Sl-R9-gSd" secondAttribute="leading" id="WZl-Et-iYA"/>
                                                 <constraint firstAttribute="bottom" secondItem="zel-Wk-N9O" secondAttribute="bottom" constant="3" id="ah3-SM-LdP"/>
@@ -170,10 +166,12 @@
                             <constraint firstItem="3xi-IX-J6e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="e6t-tE-UPe"/>
                             <constraint firstItem="jRQ-Dx-LFD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="f5d-sK-bkH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jRQ-Dx-LFD" secondAttribute="bottom" constant="20" id="fWS-Sa-WWt"/>
+                            <constraint firstItem="jRQ-Dx-LFD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="jkw-ud-3lZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="WCp-qN-vTI"/>
+                                <exclude reference="3xi-IX-J6e"/>
                                 <exclude reference="PKO-Bm-fKC"/>
                             </mask>
                         </variation>
@@ -193,7 +191,7 @@
         <!--Product-->
         <scene sceneID="wyH-ZC-z8z">
             <objects>
-                <viewController storyboardIdentifier="ProductDetailViewController" title="Product" id="zrl-Nu-gRB" customClass="ProductDetailViewController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailViewController" title="Product" id="zrl-Nu-gRB" customClass="ProductDetailViewController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wim-lU-rhy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +203,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uvT-Z3-i00">
-                                <rect key="frame" x="20" y="427" width="374" height="152"/>
+                                <rect key="frame" x="20" y="427" width="374" height="172.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHa-8O-1Vg">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -318,10 +316,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l9e-nF-Hia">
-                                        <rect key="frame" x="0.0" y="131.5" width="374" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="131.5" width="374" height="41"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Type:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aj-Xw-hjL">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Quantity:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aj-Xw-hjL">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="bgc-HV-QpV"/>
                                                 </constraints>
@@ -330,7 +328,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpm-sB-Zgs">
-                                                <rect key="frame" x="120" y="0.0" width="254" height="20.5"/>
+                                                <rect key="frame" x="120" y="0.0" width="254" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -360,7 +358,7 @@
                         <outlet property="priceLabel" destination="Rdj-mn-44K" id="JlV-gc-ATn"/>
                         <outlet property="productCodeLabel" destination="W7P-g4-HX0" id="nPx-GR-AdH"/>
                         <outlet property="productNameLabel" destination="2sc-H1-MKi" id="Gj4-O1-vcV"/>
-                        <outlet property="productTypeLabel" destination="Vpm-sB-Zgs" id="9vQ-6v-and"/>
+                        <outlet property="quantityLabel" destination="Vpm-sB-Zgs" id="9vQ-6v-and"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBf-uN-aBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -370,7 +368,7 @@
         <!--Test View Controller-->
         <scene sceneID="aPQ-j8-5bR">
             <objects>
-                <viewController storyboardIdentifier="TestViewController" id="TdS-OJ-ozv" customClass="TestViewController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestViewController" id="TdS-OJ-ozv" customClass="TestViewController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZQX-yT-vg6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -398,7 +396,7 @@
         <!--Test2 View Controller-->
         <scene sceneID="E5B-4h-IJZ">
             <objects>
-                <viewController storyboardIdentifier="Test2ViewController" id="TMb-5h-40J" customClass="Test2ViewController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Test2ViewController" id="TMb-5h-40J" customClass="Test2ViewController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reL-FP-9KS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -426,7 +424,7 @@
         <!--Root More Navigation Controller-->
         <scene sceneID="2t8-M1-8vI">
             <objects>
-                <navigationController id="UTG-tg-VIK" customClass="RootMoreNavigationController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="UTG-tg-VIK" customClass="RootMoreNavigationController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="more" id="cwI-Ht-L2A"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n2a-Hw-u5k">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -441,7 +439,7 @@
         <!--Test View Controller-->
         <scene sceneID="dvH-V1-EOd">
             <objects>
-                <viewController storyboardIdentifier="Test3ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kze-tG-DsQ" customClass="TestViewController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Test3ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kze-tG-DsQ" customClass="TestViewController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v8M-Sy-5gq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -464,7 +462,7 @@
         <!--Record-->
         <scene sceneID="gHM-vq-ZvL">
             <objects>
-                <navigationController id="mZt-Nl-6gp" customClass="RootRecordNavigationController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="mZt-Nl-6gp" customClass="RootRecordNavigationController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Record" id="FtK-ty-8o7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pcw-G2-AC5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -479,7 +477,7 @@
         <!--Item-->
         <scene sceneID="TFs-l8-Zz7">
             <objects>
-                <navigationController id="OQ4-Go-3nh" customClass="RootNavigationController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="OQ4-Go-3nh" customClass="RootNavigationController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Qmd-Sw-d9d"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rLv-EX-aQu">
@@ -495,7 +493,7 @@
         <!--Profile-->
         <scene sceneID="Ha7-9m-WpC">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="v4i-aA-6yh" customClass="ProfileViewController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="v4i-aA-6yh" customClass="ProfileViewController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mXr-us-E1J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -582,16 +580,16 @@
                                                         <rect key="frame" x="0.0" y="80" width="344" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WC-ek-8Sn">
-                                                                <rect key="frame" x="0.0" y="5" width="150" height="25"/>
+                                                                <rect key="frame" x="0.0" y="5" width="60" height="25"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="lke-Rp-4eo"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="lke-Rp-4eo"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <color key="textColor" red="0.37684822080000002" green="0.37588620189999999" blue="0.4022179246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="陳大文" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1N-4H-PPE">
-                                                                <rect key="frame" x="155" y="5" width="189" height="25"/>
+                                                                <rect key="frame" x="65" y="5" width="279" height="25"/>
                                                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -790,12 +788,12 @@
                     <navigationItem key="navigationItem" title="Profile" id="14X-RO-J0S"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="chiNameTextField" destination="Y1N-4H-PPE" id="7oM-g6-Hd5"/>
-                        <outlet property="displayNameTextField" destination="E3l-JL-uCi" id="JnW-O1-q9m"/>
-                        <outlet property="firstNameTextField" destination="CQ0-TX-dZF" id="jLU-rH-7C5"/>
+                        <outlet property="emailTextField" destination="Y1N-4H-PPE" id="7oM-g6-Hd5"/>
                         <outlet property="iconImageView" destination="jn8-Q8-Geu" id="bq5-zY-Rli"/>
-                        <outlet property="lastNameTextField" destination="CE0-h6-jyp" id="hHm-7g-dBy"/>
                         <outlet property="majorTextField" destination="GFS-x1-ZMX" id="mu4-Dh-FpS"/>
+                        <outlet property="memIdTextField" destination="CE0-h6-jyp" id="hHm-7g-dBy"/>
+                        <outlet property="nameTextField" destination="CQ0-TX-dZF" id="jLU-rH-7C5"/>
+                        <outlet property="phoneTextField" destination="E3l-JL-uCi" id="JnW-O1-q9m"/>
                         <outlet property="profileView" destination="qaN-QR-sV6" id="QjP-aR-ytT"/>
                         <outlet property="programTextField" destination="v8G-bO-TzB" id="FeN-hp-on0"/>
                         <outlet property="sidTextField" destination="kfw-UJ-TlP" id="Pcp-RA-MLs"/>
@@ -809,7 +807,7 @@
         <!--Profile-->
         <scene sceneID="EGk-7U-uJF">
             <objects>
-                <navigationController id="sUp-1d-wQf" customClass="RootProfileNavigationController" customModule="TabBarAppTemplate_LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="sUp-1d-wQf" customClass="RootProfileNavigationController" customModule="EE3070Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="31z-5z-RH8"/>
                     <navigationItem key="navigationItem" id="l3M-et-Eoi"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fPM-pU-Wdc">

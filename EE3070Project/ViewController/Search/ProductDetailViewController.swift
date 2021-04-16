@@ -14,7 +14,7 @@ class ProductDetailViewController: BaseViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var availableView: UIView!
     @IBOutlet weak var avaliableLabel: UILabel!
-    @IBOutlet weak var productTypeLabel: UILabel!
+    @IBOutlet weak var quantityLabel: UILabel!
     
     var product:Product?
     var rootRouter: RootRouter? {
@@ -30,6 +30,18 @@ class ProductDetailViewController: BaseViewController {
     
     func uiBind(product: Product){
         productNameLabel.text = product.productName
+        productCodeLabel.text = product.productCode
+        priceLabel.text = "$ \(product.price)"
+        if product.avaliable{
+            availableView.borderColor = UIColor.green
+            avaliableLabel.text = "Avaliable"
+            avaliableLabel.textColor = UIColor.green
+        }else{
+            availableView.borderColor = UIColor.red
+            avaliableLabel.text = "Not Avaliable"
+            avaliableLabel.textColor = UIColor.red
+        }
+        quantityLabel.text = "\(product.remainquantity)"
     }
     
 

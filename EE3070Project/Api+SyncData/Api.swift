@@ -11,7 +11,7 @@ import AlamofireObjectMapper
 import ObjectMapper
 
 class Api {
-  static let requestBasePath = "http://192.168.0.114:8000/catalog/api/"
+  static let requestBasePath = "https://firestore.googleapis.com/v1/projects/designproj3070/databases/(default)/"
 //    static let requestBasePath = "http://144.214.94.36:8000/catalog/api/"
 //
 //  static let ReceiveApiErrorNotification = NSNotification.Name.init("ReceiveApiErrorNotification")

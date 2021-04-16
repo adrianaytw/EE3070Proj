@@ -10,8 +10,9 @@ import RealmSwift
 import ObjectMapper
 
 class Member: Object, Mappable{
-    @objc dynamic var memberfirstName : String?
-    @objc dynamic var memberlastName : String?
+    @objc dynamic var memberName : String?
+    @objc dynamic var phone : String?
+    @objc dynamic var email : String?
     @objc dynamic var memberNumber : String?
     
     required convenience init?(map: Map) {
@@ -19,15 +20,17 @@ class Member: Object, Mappable{
     }
     
     func mapping(map: Map) {
-        memberfirstName <- map["memberfirstName"]
-        memberlastName <- map["memberlastName"]
-        memberNumber <- map["memberNumber"]
+        memberName <- map["memberName"]
+        email <- map["email"]
+        phone <- map["phone"]
+        memberNumber <- map["memId"]
     }
     
     func demoMember()-> Member{
         var demo = Member()
-        demo.memberfirstName = "First"
-        demo.memberlastName = "Last Name"
+        demo.memberName = "Test Name"
+        demo.email = "demo@demo.com"
+        demo.phone = "60265050"
         demo.memberNumber = "12345678"
         return demo
     }
