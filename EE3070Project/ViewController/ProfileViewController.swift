@@ -21,8 +21,8 @@ class ProfileViewController: BaseViewController {
     
     @IBOutlet weak var memIdTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var sidTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var programTextField: UITextField!
     @IBOutlet weak var majorTextField: UITextField!
     
@@ -64,8 +64,8 @@ class ProfileViewController: BaseViewController {
         nameTextField.roundCorners(cornerRadius: 10)
         memIdTextField.roundCorners(cornerRadius: 10)
         emailTextField.roundCorners(cornerRadius: 10)
-        phoneTextField.roundCorners(cornerRadius: 10)
         sidTextField.roundCorners(cornerRadius: 10)
+        phoneTextField.roundCorners(cornerRadius: 10)
         programTextField.roundCorners(cornerRadius: 10)
         majorTextField.roundCorners(cornerRadius: 10)
         nameTextField.text = member.memberName

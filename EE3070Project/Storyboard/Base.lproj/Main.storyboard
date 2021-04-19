@@ -811,10 +811,10 @@
                         <outlet property="majorTextField" destination="GFS-x1-ZMX" id="mu4-Dh-FpS"/>
                         <outlet property="memIdTextField" destination="CE0-h6-jyp" id="hHm-7g-dBy"/>
                         <outlet property="nameTextField" destination="CQ0-TX-dZF" id="jLU-rH-7C5"/>
-                        <outlet property="phoneTextField" destination="E3l-JL-uCi" id="JnW-O1-q9m"/>
+                        <outlet property="phoneTextField" destination="kfw-UJ-TlP" id="Pcp-RA-MLs"/>
                         <outlet property="profileView" destination="qaN-QR-sV6" id="QjP-aR-ytT"/>
                         <outlet property="programTextField" destination="v8G-bO-TzB" id="FeN-hp-on0"/>
-                        <outlet property="sidTextField" destination="kfw-UJ-TlP" id="Pcp-RA-MLs"/>
+                        <outlet property="sidTextField" destination="E3l-JL-uCi" id="JnW-O1-q9m"/>
                         <outlet property="updateButton" destination="HVT-DK-bNI" id="E0Y-CT-DK0"/>
                     </connections>
                 </viewController>
