@@ -215,7 +215,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ToL-SW-7bF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ToL-SW-7bF">
                                 <rect key="frame" x="75" y="113" width="264" height="264"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ToL-SW-7bF" secondAttribute="height" multiplier="1:1" id="V8S-j7-WND"/>
@@ -374,6 +374,7 @@
                     <connections>
                         <outlet property="availableView" destination="Bmx-Ps-brR" id="u0O-nC-oLb"/>
                         <outlet property="avaliableLabel" destination="N75-wN-F8a" id="BxK-1H-HcY"/>
+                        <outlet property="imageView" destination="ToL-SW-7bF" id="Axb-cZ-TCF"/>
                         <outlet property="priceLabel" destination="Rdj-mn-44K" id="JlV-gc-ATn"/>
                         <outlet property="productCodeLabel" destination="W7P-g4-HX0" id="nPx-GR-AdH"/>
                         <outlet property="productNameLabel" destination="2sc-H1-MKi" id="Gj4-O1-vcV"/>

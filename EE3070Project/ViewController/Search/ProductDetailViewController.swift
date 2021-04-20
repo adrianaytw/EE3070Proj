@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductDetailViewController: BaseViewController {
 
@@ -15,6 +16,7 @@ class ProductDetailViewController: BaseViewController {
     @IBOutlet weak var availableView: UIView!
     @IBOutlet weak var avaliableLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     var product:Product?
     var rootRouter: RootRouter? {
@@ -44,6 +46,7 @@ class ProductDetailViewController: BaseViewController {
             avaliableLabel.textColor = UIColor.white
         }
         quantityLabel.text = "\(product.remainquantity)"
+        imageView.kf.setImage(with: URL(string: product.photolink!))
     }
     
 

@@ -15,6 +15,7 @@ class Product: Object, Mappable{
     @objc dynamic var avaliable : Bool = false
     @objc dynamic var productCode : String?
     @objc dynamic var price : Double = 0
+    @objc dynamic var photolink : String?
     
     required convenience init?(map: Map) {
         self.init()
@@ -26,6 +27,7 @@ class Product: Object, Mappable{
         productCode <- map["productCode"]
         avaliable <- map["avaliable"]
         price <- map["price"]
+        photolink <- map["photolink"]
     }
     
     func demoProduct()->Product{
